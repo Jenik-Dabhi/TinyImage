@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinyImage</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="images/bamboo-logo.png" type=""/>
+    <style>
+        .contact-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: center;
+}
+.image-here {
+    background-image: url('images/bamboo_right.png');
+    background-size: 32%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    padding: 60px 0;
+}
+.contact-container input,
+.contact-container textarea {
+  width: 92%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: sans-serif;
+}
+
+.contact-container button{
+						background-color: #709938;
+						border:1px solid #709938;
+						padding: 8px 20px;
+						transition: 0.4s ease all;
+						border-radius: 10px;
+						&:hover{
+							
+							color: #709938;
+							background-color: #fff;
+							a{
+								color: #709938;
+							}
+						}}
+
+
+
+.faq-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  font-family: sans-serif;
+}
+
+.faq-container h2 {
+  text-align: center;
+  color: #709938;
+  margin-bottom: 20px;
+}
+
+.faq-container details {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.faq-container summary {
+  font-weight: bold;
+  color: #333;
+  outline: none;
+}
+
+.faq-container details[open] summary {
+  color: #709938;
+}
+.main-contact-sec {
+    border: 3px solid #57ae5d;
+    padding: 10px 0;
+    border-width: 3px 0 0;
+}
+.faq-container details div {
+  margin-top: 8px;
+  line-height: 1.5;
+  color: #444;
+}
+
+details[open] .faq-answer {
+  animation: fadeSlide 0.8s ease-in-out;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* .contact-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/small-bamboo.png') no-repeat center center/cover;
+  z-index: -1;
+  opacity: 0.2;
+}
+.contact-container {
+  position: relative;  required 
+} */ /* removed */
+
+/* Media queries for Contact.html specific styles */
+@media (max-width: 768px) {
+    .image-here {
+        background-size: 25%; /* Adjust bamboo size for tablets */
+        background-position: right 20%;
+        padding: 40px 0;
+    }
+    .contact-container, .faq-container {
+        margin: 20px auto;
+        padding: 15px;
+        max-width: 90%; /* Make containers take more width */
+    }
+    .contact-container input, .contact-container textarea {
+        width: 95%; /* Adjust input/textarea width */
+    }
+}
+
+@media (max-width: 575px) {
+    .image-here {
+        background-size: 20%; /* Adjust bamboo size for mobile */
+        background-position: right 10%;
+        padding: 30px 0;
+    }
+    .contact-container, .faq-container {
+        margin: 15px auto;
+        padding: 10px;
+        max-width: 95%; /* Even more width on mobile */
+    }
+    .contact-container input, .contact-container textarea {
+        width: 98%; /* Adjust input/textarea width */
+    }
+}
+    </style>
+</head>
+<body>
+<header class="header">
+		<div class="container">
+			<nav class="navbar">
+				<div class="navdiv">
+					<div class="header-logo">
+						<img alt="Header logo" src="images/tinyimage-high-resolution-logo-removebg-previeww.png" />
+					</div>
+					<div class="navmenu">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="compare.html">Compare</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="#">My Files</a></li>
+							<li><a href="pricing.html">Pricing</a></li>
+							<li><a href="Contact.html">Contact</a></li>
+							<button><a href="#">SignUp</a></button>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+<div class="image-here">
+	<div class="faq-container">
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>How does TinyImage compress images?</summary>
+    <div class="faq-answer">We use advanced compression algorithms that smartly reduce the file size of your images while 
+		maintaining visual quality. This ensures that your website loads faster without any noticeable drop in image clarity.</div>
+  </details>
+
+  <details>
+    <summary>Is the image quality affected?</summary>
+    <div class="faq-answer">TinyImage is built to preserve the original resolution and sharpness of your photos. Our compression method targets only the unnecessary data, so your images look just as stunning, only lighter in size.</div>
+  </details>
+
+  <details>
+    <summary>Is my image data secure?</summary>
+    <div class="faq-answer">Your privacy and file security are very important to us. Every image you upload is processed over a secure connection and is automatically deleted from our servers shortly after compression is completed.</div>
+  </details>
+
+  <details>
+    <summary>Do I need to install anything?</summary>
+    <div class="faq-answer">TinyImage is fully browser-based, meaning there's no software to install. Simply drag and drop your images, let us do the compression, and download your optimized files — all within seconds.</div>
+  </details>
+
+  <details>
+    <summary>Can I compress multiple images at once?</summary>
+    <div class="faq-answer">Yes, you can compress multiple images at once. Just select all the files you want to upload, and our tool will handle them together. After compression, you’ll receive a neatly packaged ZIP file for easy download.</div>
+  </details>
+</div>
+
+</div>
+
+
+
+<div class="main-contact-sec">
+
+  <div class="contact-container">
+  <h2>Contact Us</h2>
+  <p>Have questions or feedback? Send us a message!</p>
+  <form>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
+</div>
+
+
+
+
+
+
+
+    <footer>
+		<div class="container-fluid">
+			<div class="footer-content">
+				<div class="footer-logo">
+					<a href="index.html">
+					<img src="images/tinyimage-high-resolution-logo-removebg-previeww.png" alt="footer">
+					</a>
+				</div>
+				
+				<div class="copyright-text">
+					<p>Copyright ©2025 tinyImage. All Rights Reserved.</p>
+				</div>
+				<div class="footer-laguages">
+					<a href="#">
+					<img src="Logos/translate-icon.png" alt="">
+						<span>English</span>
+				</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>

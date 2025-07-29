@@ -1,0 +1,1122 @@
+/*
+ * General Styles and Reset
+ *
+ * This section contains universal styles for the entire website,
+ * ensuring consistent text decoration, margins, and font families.
+ * It's the foundation upon which all other styles are built.
+ */
+* {
+	text-decoration: none;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	/* Added box-sizing for consistent box model behavior across all elements */
+	box-sizing: border-box;
+}
+
+/*
+ * Container for Centering Content
+ *
+ * This class provides a maximum width for content and centers it horizontally,
+ * ensuring readability and a structured layout on larger screens.
+ */
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	/* Added padding for smaller screens to prevent content from touching edges */
+	padding: 0 15px;
+}
+/* Added container-fluid for full-width sections, often used for footers or headers */
+.container-fluid {
+    width: 100%;
+    padding: 0 15px; /* Added padding for consistency */
+}
+
+/*
+ * Header Section Styles
+ *
+ * This section defines the styling for the website's header, including
+ * navigation, logo, and overall layout. It ensures the header remains
+ * visible and well-structured.
+ */
+.header{
+	z-index: 99;
+	padding: 10px 0;
+	box-shadow: -2px -2px 5px #727272;
+
+	/* Nested styles for navbar components */
+	.navbar{
+		.navdiv{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			/* Flex wrap for smaller screens to allow elements to stack */
+			flex-wrap: wrap;
+			.header-logo{
+				img{
+					width: 100%;
+					max-width: 225px;
+					/* Ensure logo scales down on smaller screens */
+					height: auto;
+				}
+			}
+			.navmenu{
+				ul{
+					display: flex;
+					align-items: center;
+					list-style-type: none;
+					gap: 20px;
+					/* Allow navigation items to wrap on smaller screens */
+					flex-wrap: wrap;
+					justify-content: center; /* Center items when wrapped */
+					padding: 0; /* Removed default ul padding */
+					
+					li{
+						a{
+							font-family: sans-serif;
+							font-size: 14px;
+							text-transform: uppercase;
+							color: #000;
+							transition: 0.3s ease all;
+							&:hover{
+								color: #579600;
+								text-decoration:underline;
+							}
+						}
+					}
+					button{
+						background-color: #709938;
+						border:1px solid #709938;
+						padding: 8px 20px;
+						transition: 0.4s ease all;
+						border-radius: 10px;
+						&:hover{
+							
+							color: #709938;
+							background-color: #fff;
+							a{
+								color: #709938;
+							}
+						}
+						a{
+							
+							font-family: sans-serif;
+							font-size: 14px;
+							text-transform: uppercase;
+							color: #ffffff;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+ * Upload Section Styles (with Bamboo Backgrounds)
+ *
+ * This section handles the main file upload area, including its background
+ * images and the styling of the drag-and-drop zone.
+ */
+.upload-section {
+    background-image: url('images/bamboo-2x.png');
+    background-position: 96% 88%;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    height: 300px; /* Fixed height might be an issue, consider min-height or content-driven height */
+    width: 100%;
+	/* Nested styles for inner upload components */
+	.upload-second{
+		  background-image: url('images/bamboo-2x.png');
+    background-position: -20% 50%;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    height: 300px; /* Fixed height might be an issue, consider min-height or content-driven height */
+    width: 100%;
+	
+	.upload-inner{
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center; 
+        background-image: url(images/grass-confetti-2x.png);
+        background-position: bottom;
+        background-size: 2000px;
+        background-repeat: no-repeat;
+		vertical-align: middle; /* Removed, vertical-align is for inline/table-cell elements */
+		.upload-wrapper{
+			.upload-div{
+				max-width: 400px;
+				margin: 0 auto;
+				border: 3px dashed #616778;
+				border-radius: 10px;
+				padding: 20px 15px;
+				text-align: center;
+				/* Added width: 90% for responsiveness */
+				width: 90%;
+				img{
+					width: 70px;
+					/* Ensure image scales */
+					max-width: 100%;
+					height: auto;
+				}
+				h3{
+					font-size: 20px;
+					font-family: sans-serif;
+					font-weight: 700;
+					color: #000;
+					padding: 15px 0 5px;
+				}
+				p{
+					font-size: 16px;
+					font-family: sans-serif;
+					font-weight: 300;
+					color: #727272;
+				}
+			}
+		}
+	}
+	}
+	
+}
+
+/*
+ * About Section Styles
+ *
+ * This section details the company's mission and features,
+ * with a responsive layout for feature boxes.
+ */
+.about-section{
+padding: 40px 0;
+	text-align: center;
+	
+	.about-content{
+		h2{
+			font-size: 32px;
+			font-family: sans-serif;
+			font-weight: 600;
+			color: #709938;
+			padding-bottom: 17px;
+		}
+		p{
+			font-size: 15px;
+			line-height: 20px; /* Changed to line-height for better readability */
+			width: 100%;
+			max-width: 660px;
+			margin: 0 auto;
+		}
+	}
+	
+	.about-features{
+		margin: 30px 0;
+		.features-boxes{
+			max-width: 750px;
+			margin: 0 auto;
+			display: flex;
+            justify-content: space-between;
+            gap: 23px;
+            flex-wrap: wrap; /* Ensures boxes wrap on smaller screens */
+			position: relative;
+			/* &::before{
+				position: absolute;
+				content:'';
+				width: 100%;
+				height: 100%;
+				background-image: url(blob.svg);
+				background-size: contain;
+                background-repeat: no-repeat;
+				                top: -24%;
+                left: -21%;
+                z-index: -1;
+			} */ /* removed */
+			.features-box{
+				text-align: left;
+				box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .15);
+				padding: 30px 25px;
+				background-color: #f6fbef;
+				border-radius: 10px;
+				border-bottom: 5px solid #709938;
+				/* Added flex basis for responsive sizing */
+				flex: 1 1 calc(33% - 23px); /* Default to 3 columns, adjusting for gap */
+				min-width: 280px; /* Minimum width for the box before wrapping */
+
+				img{
+					width:40px;
+					/* Ensure image scales */
+					max-width: 100%;
+					height: auto;
+				}
+				h4{
+					font-size: 20px;
+					font-weight: 600;
+					font-family: sans-serif;
+					padding-bottom: 10px;
+				}
+				p{
+					font-size: 16px;
+					line-height: 20px; /* Changed to line-height for better readability */
+					font-family: sans-serif;
+					color: #40444F;
+				}
+			}
+		}
+	}
+}
+
+/*
+ * Trusted Brand Section Styles
+ *
+ * This section displays logos of trusted brands, with a marquee effect.
+ * Styles ensure logos are properly sized and the marquee functions well.
+ */
+.trusted-brand-section{
+	text-align: center;
+	background-color: #f1f6f8;
+	padding: 40px 0;
+	h2{
+		font-size: 32px;
+		font-family: sans-serif;
+		font-weight: 600;
+		color: #709938;
+		padding-bottom: 17px;
+	}
+	.trusted-brand-list{
+		max-width: 750px;
+		margin: 0 auto;
+		padding-top: 20px;
+		ul{
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			li{
+				flex: 0 0 20%;
+				max-width: 20%;
+				img{
+					width: 100%;
+					max-width: 100px;   /* Size of image*/
+					/* Ensure image scales */
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+/*
+ * Footer Section Styles
+ *
+ * This section defines the styling for the website's footer, including
+ * copyright information and language selection.
+ */
+footer{
+	background-color:#709938;
+	color:#ffffff;
+	padding: 20px 30px;
+	.footer-content{
+		margin-top: 8px;
+		margin-bottom: 10px;
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		/* Allow footer content to stack on smaller screens */
+		flex-wrap: wrap;
+		text-align: center; /* Center text when stacked */
+		.footer-logo{
+			/* Added margin for spacing when stacked */
+			margin-bottom: 10px;
+			img{
+				width: 100px;
+				/* Ensure logo scales */
+				height: auto;
+			}
+		}
+		
+		/* .footer-links ul {
+			display:flex;
+            gap:10px;
+		} */ /* removed */
+		.footer-laguages{
+			/* Added margin for spacing when stacked */
+			margin-top: 10px;
+			img{
+				width: 25px;
+				/* Ensure image scales */
+				height: auto;
+			}
+			a{
+				color:#ffffff; 
+				transition: 0.3s ease all;
+							&:hover{
+								text-decoration:underline black;
+								
+							}
+			}
+			
+		}
+		/* Added copyright text alignment for responsiveness */
+		.copyright-text {
+            flex-basis: 100%; /* Occupy full width when stacked */
+            order: 3; /* Order it last when stacked */
+            margin-top: 10px;
+        }
+	}
+}
+
+/*
+ * File List and Processing Styles
+ *
+ * These styles are for the dynamic display of files being processed
+ * and the results after compression.
+ */
+.file-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.file-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.file-info {
+  font-family: sans-serif;
+}
+
+button {
+  padding: 8px 14px;
+  background-color: #709938;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.loader {
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #0071e2;
+  width: 130px;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
+/* ______________________________________________________________ */
+
+/* Styles for the processing bar container */
+.processing-bar-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.processing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    /* Allow header elements to stack on smaller screens */
+    flex-wrap: wrap;
+}
+
+.processing-header h3 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+.progress-container {
+    width: 60%; /* Adjust as needed */
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+    position: relative;
+    /* Full width on smaller screens */
+    flex-basis: 100%;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #579600; /* Green color for progress */
+    width: 0%;
+    border-radius: 5px;
+    transition: width 0.2s ease-in-out;
+}
+
+.progress-percentage {
+    position: absolute;
+    right: 10px;
+    top: -20px; /* Position above the bar */
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Styles for individual file items during processing */
+.processing-file-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    /* Allow file items to wrap if content is too wide */
+    flex-wrap: wrap;
+}
+
+.processing-file-item:last-child {
+    border-bottom: none;
+}
+
+.processing-file-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* changed from cover to contain */
+    margin-right: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd; /* Added a subtle border */
+}
+
+.processing-file-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* Allow info to take full width if needed */
+    flex-basis: calc(100% - 65px); /* Adjusting for image width + margin */
+}
+
+.processing-file-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 15px;
+}
+
+.processing-file-size {
+    font-size: 13px;
+    color: #666;
+    margin-top: 3px;
+}
+
+.processing-status {
+    font-size: 14px;
+    color: #579600; /* Green for optimizing... */
+    font-weight: bold;
+    /* Push to the right on larger screens, take full width on small */
+    margin-left: auto;
+    flex-basis: 100%; /* On small screens, take full width */
+    text-align: right; /* Align status to the right */
+}
+
+/* Updated .file-item for compressed results */
+.file-list {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between; /* To push optimized size to the right */
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    /* Allow items to wrap */
+    flex-wrap: wrap;
+}
+
+.file-item-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Allow left section to take full width on small screens */
+    flex-basis: 100%;
+    margin-bottom: 10px;
+}
+
+.file-item img {
+    width: 80px; /* Adjusted size for the final display */
+    height: 80px;
+    object-fit: contain; /* changed from cover to contain */
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.file-info {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.file-name {
+    font-weight: bold;
+    color: #333;
+    /* Allow name to wrap if long */
+    word-break: break-all;
+}
+
+.original-size, .optimized-size {
+    font-size: 13px;
+    color: #666;
+    margin-top: 3px;
+}
+
+.optimization-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    /* Take full width on small screens and push to right */
+    flex-basis: 100%;
+    justify-content: flex-end;
+}
+
+.optimization-percentage {
+    color: #d9534f; /* Red for negative percentage (reduction) */
+}
+
+.download-icon-container {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Light background for the icon */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.download-icon-container img {
+    width: 30px; /* Size of the icon inside the circle */
+    height: 25px;
+    object-fit: contain;
+    border: none; /* Remove border for the icon image */
+}
+
+.summary-card {
+    background-color: #e6ffe6; /* Light green background */
+    border: 1px solid #a3e6a3;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: sans-serif;
+}
+
+.summary-card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.summary-card strong {
+    color: #579600; /* Green for emphasis */
+}
+
+/* Adjustments for the upload section for better visual flow when results appear */
+.upload-section.hidden {
+    display: none;
+}
+.upload-section.processing {
+    opacity: 0.5; /* Slightly dim the upload area when processing starts */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Ensure the button styles from your original CSS apply to the new buttons */
+.actions button {
+    padding: 10px 20px;
+    background-color: #709938;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: #579600;
+}
+
+
+/*
+ * Compare Section CSS
+ *
+ * Styles for the image comparison section, ensuring the image scales
+ * correctly and text is readable.
+ */
+.compare-section {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+.compare-section h2 {
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-size:  2rem;
+  color: #4caf50;
+  padding-bottom: 25px;
+}
+/* .compare-image {
+  position: relative;
+  display: inline-block;
+  max-width: 90%;
+} */ /* removed */
+.compare-image img {
+  width: 100%; /* Changed from fixed 40rem to 100% for responsiveness */
+  max-width: 640px; /* Added max-width to control size on large screens */
+  height: auto; /* Ensure aspect ratio is maintained */
+  border-radius: 8px;
+  box-shadow:2px 2px 10px 2px#000;
+}
+
+.description {
+	font-size: 20px;
+  padding-top: 50px;
+  max-width: 660px ;
+  margin: 0 auto;
+  font-style:italic;
+  color: #2a2a2a;
+}
+
+/*
+ * Counter Box Styles
+ *
+ * Styles for the live counter display.
+ */
+.counter-box{
+	text-align: center;
+	background-color: #ECFAE5;
+	color: rgb(216, 39, 39); /* This color is overridden by nested h3 and p colors */
+	h3{
+		padding-top: 20px;
+        margin-bottom: 10px;
+        color: #999999;
+	  }
+    #count{
+		text-align: center;
+		color: #99d57d;
+		font-size: 2rem;
+		font-weight: bold;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	  }
+     p{
+		color:#999999;
+		padding-top: 10px;
+		padding-bottom: 20px;
+		font-size: 15px;
+	 }
+}
+
+/*
+ * Logo Marquee Styles
+ *
+ * Styles for the scrolling logo section.
+ */
+.logo-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #f4f9f1;
+  padding: 10px 0;
+}
+
+.logo-track {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  animation: scroll 20s linear infinite;
+  /* Ensure enough width for smooth looping */
+  width: max-content;
+}
+
+.logo-track img {
+  height: 54px; /* Fixed height, consider making it more fluid */
+  margin: 0 30px;
+  vertical-align: middle;
+	width: 125px; /* Fixed width, consider making it more fluid */
+    object-fit: contain;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/*
+ * Media Queries for Responsiveness
+ *
+ * These rules adjust the layout and styling for different screen sizes,
+ * ensuring the website is fully responsive.
+ */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px; /* Standard Bootstrap-like container width */
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    .header .navbar .navdiv .navmenu ul {
+        gap: 15px; /* Slightly reduce gap for tighter navigation */
+    }
+    .about-section .about-features .features-boxes .features-box {
+        flex: 1 1 calc(33% - 20px); /* Adjust for 3 columns with slightly less gap */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    html {
+        font-size: 15px; /* Slightly reduce base font size */
+    }
+    .container {
+        max-width: 720px;
+    }
+    .header .navbar .navdiv {
+        flex-direction: column; /* Stack logo and nav menu */
+        text-align: center;
+    }
+    .header .navbar .navdiv .header-logo {
+        margin-bottom: 15px; /* Add space between logo and nav */
+    }
+    .header .navbar .navdiv .navmenu ul {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 10px;
+        width: 100%; /* Full width for stacked menu */
+    }
+    .header .navbar .navdiv .navmenu ul li,
+    .header .navbar .navdiv .navmenu ul button {
+        width: 100%; /* Make nav items and button full width */
+    }
+    .header .navbar .navdiv .navmenu ul button a {
+        display: block; /* Make button link fill the button */
+        padding: 8px 0;
+    }
+
+    .upload-section {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 30px 0; /* Add vertical padding */
+        background-size: 20%; /* Adjust bamboo size */
+        background-position: 90% 90%, 10% 50%; /* Adjust positions */
+    }
+    .upload-section .upload-second {
+        height: auto;
+        background-size: 20%;
+        background-position: 10% 50%;
+    }
+    .upload-section .upload-second .upload-inner .upload-wrapper .upload-div {
+        width: 95%; /* Make upload div slightly wider */
+        max-width: 350px; /* Reduce max-width for tablets */
+    }
+
+    .about-section .about-features .features-boxes {
+        justify-content: center; /* Center boxes when wrapping */
+    }
+    .about-section .about-features .features-boxes .features-box {
+        flex: 1 1 calc(50% - 20px); /* Two columns layout */
+    }
+
+    .trusted-brand-section .trusted-brand-list ul li {
+        flex: 0 0 33%; /* Three columns for logos */
+        max-width: 33%;
+        margin-bottom: 20px; /* Add space between rows */
+    }
+    .logo-track img {
+        height: 45px; /* Slightly smaller logos */
+        width: 100px;
+        margin: 0 20px; /* Reduce margin */
+    }
+    .footer .footer-content {
+        flex-direction: column; /* Stack footer content */
+        text-align: center;
+    }
+    .footer .footer-content .footer-logo,
+    .footer .footer-content .copyright-text,
+    .footer .footer-content .footer-laguages {
+        margin-bottom: 15px; /* Add space between stacked items */
+    }
+    .footer .footer-content .copyright-text {
+        order: 2; /* Keep copyright in middle */
+    }
+    .footer .footer-content .footer-laguages {
+        order: 3; /* Move language to bottom */
+    }
+
+    .pricing-container .cards .card {
+        width: calc(50% - 20px); /* Two cards per row */
+    }
+    .contact-container, .faq-container {
+        max-width: 90%; /* Adjust max-width for contact/faq */
+    }
+    .image-here {
+        background-size: 25%; /* Adjust bamboo size */
+        background-position: right 20%;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    html {
+        font-size: 14px; /* Further reduce base font size */
+    }
+    .container {
+        max-width: 540px;
+    }
+    .header .navbar .navdiv .navmenu ul {
+        gap: 8px; /* Smaller gap */
+    }
+    .upload-section {
+        background-size: 15%; /* Smaller bamboo */
+        background-position: 95% 95%, 5% 50%;
+    }
+    .upload-section .upload-second {
+        background-size: 15%;
+        background-position: 5% 50%;
+    }
+    .upload-section .upload-second .upload-inner .upload-wrapper .upload-div {
+        max-width: 300px; /* Even smaller max-width */
+    }
+    .about-section .about-features .features-boxes .features-box {
+        flex: 1 1 90%; /* Single column layout */
+        margin: 0 auto 20px; /* Center and add bottom margin */
+    }
+    .trusted-brand-section .trusted-brand-list ul li {
+        flex: 0 0 50%; /* Two columns for logos */
+        max-width: 50%;
+    }
+    .logo-track img {
+        height: 40px; /* Smaller logos */
+        width: 80px;
+        margin: 0 15px;
+    }
+    .pricing-container .cards .card {
+        width: 90%; /* Single card per row */
+        margin: 0 auto 20px; /* Center and add bottom margin */
+    }
+    .contact-container, .faq-container {
+        max-width: 95%; /* Adjust max-width for contact/faq */
+    }
+    .image-here {
+        background-size: 20%; /* Adjust bamboo size */
+        background-position: right 10%;
+    }
+    .processing-header .progress-container {
+        width: 100%; /* Full width for progress bar */
+    }
+    .file-item-left {
+        flex-direction: column; /* Stack image and info in file item */
+        align-items: flex-start;
+        text-align: left;
+    }
+    .file-item img {
+        margin-bottom: 10px;
+    }
+    .optimization-details {
+        justify-content: flex-start; /* Align details to left */
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    html {
+        font-size: 13px; /* Smallest base font size */
+    }
+    .container {
+        padding: 0 10px; /* Smaller padding */
+    }
+    .header .navbar .navdiv {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header .navbar .navdiv .header-logo {
+        margin-bottom: 10px;
+    }
+    .header .navbar .navdiv .navmenu ul {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        padding: 0;
+    }
+    .header .navbar .navdiv .navmenu ul li,
+    .header .navbar .navdiv .navmenu ul button {
+        width: 100%;
+    }
+    .header .navbar .navdiv .navmenu ul button a {
+        display: block;
+        padding: 8px 0;
+    }
+
+    .upload-section {
+        height: auto;
+        padding: 20px 0;
+        background-size: 10%; /* Very small bamboo or hide */
+        background-position: 98% 98%, 2% 50%;
+    }
+    .upload-section .upload-second {
+        height: auto;
+        background-size: 10%;
+        background-position: 2% 50%;
+    }
+    .upload-section .upload-second .upload-inner .upload-wrapper .upload-div {
+        width: 98%; /* Almost full width */
+        max-width: 280px;
+        padding: 15px 10px;
+    }
+    .upload-section .upload-second .upload-inner .upload-wrapper .upload-div h3 {
+        font-size: 18px;
+    }
+    .upload-section .upload-second .upload-inner .upload-wrapper .upload-div p {
+        font-size: 14px;
+    }
+
+    .about-section .about-content h2 {
+        font-size: 26px;
+    }
+    .about-section .about-content p {
+        font-size: 14px;
+    }
+    .about-section .about-features .features-boxes .features-box {
+        flex: 1 1 100%; /* Single column */
+        margin: 0 auto 15px;
+        padding: 20px 15px;
+    }
+    .about-section .about-features .features-boxes .features-box h4 {
+        font-size: 18px;
+    }
+    .about-section .about-features .features-boxes .features-box p {
+        font-size: 14px;
+    }
+
+    .trusted-brand-section h2 {
+        font-size: 26px;
+    }
+    .trusted-brand-section .trusted-brand-list ul li {
+        flex: 0 0 100%; /* Single column for logos, or consider hiding some */
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    .logo-track img {
+        height: 35px; /* Even smaller logos */
+        width: 70px;
+        margin: 0 10px;
+    }
+    .footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer .footer-content .footer-logo,
+    .footer .footer-content .copyright-text,
+    .footer .footer-content .footer-laguages {
+        margin-bottom: 10px;
+    }
+
+    .compare-section h2 {
+        font-size: 1.5rem;
+    }
+    .description {
+        font-size: 16px;
+        padding-top: 30px;
+    }
+
+    .pricing-container .pricing-title {
+        font-size: 28px;
+    }
+    .pricing-container .cards .card {
+        width: 100%; /* Full width for cards */
+        margin: 0 auto 15px;
+        padding: 25px 15px;
+    }
+    .contact-container, .faq-container {
+        max-width: 100%; /* Full width for contact/faq */
+        margin: 20px auto;
+        padding: 15px;
+    }
+    .contact-container h2, .faq-container h2 {
+        font-size: 24px;
+    }
+    .contact-container input, .contact-container textarea {
+        width: 90%; /* Adjust input/textarea width */
+    }
+    .image-here {
+        background-size: 15%; /* Adjust bamboo size */
+        background-position: right 5%;
+    }
+
+    .processing-header h3 {
+        font-size: 16px;
+    }
+    .processing-header .progress-container {
+        width: 100%;
+    }
+    .processing-file-item img {
+        width: 40px;
+        height: 40px;
+    }
+    .processing-file-name {
+        font-size: 14px;
+    }
+    .processing-file-size {
+        font-size: 12px;
+    }
+    .processing-status {
+        font-size: 13px;
+    }
+    .file-item img {
+        width: 60px;
+        height: 60px;
+    }
+    .file-name {
+        font-size: 14px;
+    }
+    .original-size, .optimized-size {
+        font-size: 12px;
+    }
+    .optimization-details {
+        font-size: 13px;
+        flex-direction: column; /* Stack percentage and size */
+        align-items: flex-end;
+    }
+    .download-icon-container {
+        margin-top: 5px; /* Add space when stacked */
+    }
+    .summary-card p {
+        font-size: 14px;
+    }
+    .actions button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,212 @@
+	<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tinyImage</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/bamboo-logo.png" type=""/>
+        <style>
+            body {
+                background-image: url('images/bamboo-2x.png');
+                background-size:33%;
+                background-position: 96% 88%;
+                
+                background-repeat: no-repeat;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  
+  color: #333;
+}
+
+
+header{
+    background-color: white;
+}
+.bamboo-here{
+background-image: url('images/bamboo_right.png');
+                background-size:464px;
+                background-position: -27% 58%;
+                background-repeat: no-repeat;
+}
+
+.about-container {
+   
+ 
+   
+    background-repeat: no-repeat; /* This background-repeat is redundant if no background-image is set here */
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  font-size: 35px;
+  color: #007acc;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 22px;
+  color: #333;
+  margin-top: 30px;
+  text-align: center; 
+  
+}
+
+.intro {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 60px;
+  line-height: 1.6;
+}
+
+.section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 60px;
+}
+
+/* Media queries for about.html specific styles */
+@media (max-width: 768px) {
+    body {
+        background-size: 20%; /* Adjust bamboo size for tablets */
+        background-position: 90% 90%;
+    }
+    .bamboo-here {
+        background-size: 200px; /* Adjust bamboo size for tablets */
+        background-position: -10% 50%;
+    }
+    .about-container {
+        margin: 30px 15px; /* Adjust margin for smaller screens */
+        padding: 15px;
+        border-radius: 20px;
+    }
+    h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .intro {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+    .section p {
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    body {
+        background-size: 15%; /* Adjust bamboo size for mobile */
+        background-position: 95% 95%;
+    }
+    .bamboo-here {
+        background-size: 150px; /* Adjust bamboo size for mobile */
+        background-position: -5% 50%;
+    }
+    .about-container {
+        margin: 20px 10px; /* Further adjust margin for mobile */
+        padding: 10px;
+        border-radius: 15px;
+    }
+    h1 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+    .intro {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .section p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <div class="bamboo-here">
+        <header class="header">
+		<div class="container">
+			<nav class="navbar">
+				<div class="navdiv">
+					<div class="header-logo">
+						<img alt="Header logo" src="images/tinyimage-high-resolution-logo-removebg-previeww.png" />
+					</div>
+					<div class="navmenu">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="compare.html">Compare</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="#">My Files</a></li>
+							<li><a href="pricing.html">Pricing</a></li>
+							<li><a href="Contact.html">Contact</a></li>
+							<button><a href="#">SignUp</a></button>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+<div class="about-container">
+    <h1>About Us</h1>
+    <p class="intro">
+     We created this image compression tool to help people make their websites faster and more efficient. Our goal is to reduce image file sizes without affecting quality. This tool supports JPEG, PNG, and WebP images, making it perfect for developers, designers, and everyday users.
+    </p>
+
+    <div class="section">
+      <h2>Why We Created It</h2>
+      <p>
+        Whether you're a developer, designer, or just uploading to your blog, file size matters. Our compressor is smart enough to shrink images without hurting their clarity — because speed and quality both matter.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Meet the Team</h2>
+      <p>
+        We're a small group of developers and creatives passionate about making everyday tools better. Simple UI, fast backend, real results.
+      </p>
+    </div>
+  </div>
+
+    <footer>
+		<div class="container-fluid">
+			<div class="footer-content">
+				<div class="footer-logo">
+					<a href="index.html">
+					<img src="images/tinyimage-high-resolution-logo-removebg-previeww.png" alt="footer">
+					</a>
+				</div>
+				
+				<div class="copyright-text">
+					<p>Copyright ©2025 tinyImage. All Rights Reserved.</p>
+				</div>
+				
+				<div class="footer-laguages">
+					<a href="#">
+					<img src="Logos/translate-icon.png" alt="">
+						<span>English</span>
+				</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+    </div>
+    </body>
+    </html>
